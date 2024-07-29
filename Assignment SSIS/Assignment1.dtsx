@@ -1,0 +1,3170 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="7/17/2024 10:23:15 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="1FE64A236B5753A"
+  DTS:CreatorName="1FE64A236B5753A\Administrator"
+  DTS:DTSID="{3FCA1406-AB58-4D12-84E5-0E4DFD31113C}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5556.0"
+  DTS:LocaleID="16393"
+  DTS:ObjectName="assignment1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="21"
+  DTS:VersionGUID="{15EBBF1E-8145-475B-8F62-8277BEEFDDFA}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{7C3DA358-185A-4E31-A2D7-DFC9A84901D4}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="16393"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="D:\sales_data_sample.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ORDERNUMBER"
+              DTS:DTSID="{4F0FDE5D-F2F4-464B-A62C-47954A0A83A5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="QUANTITYORDERED"
+              DTS:DTSID="{194E72D6-4578-4E8F-ACFF-A74AE76D6D88}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PRICEEACH"
+              DTS:DTSID="{CD61BA17-D090-441F-AB03-C4DDDDADE00C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ORDERLINENUMBER"
+              DTS:DTSID="{BA1968DD-3DE7-41DF-ACF4-14010DDB3101}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SALES"
+              DTS:DTSID="{797C6E6E-B2E6-4D37-84BA-316A01BE2823}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ORDERDATE"
+              DTS:DTSID="{ED3CFDA8-7A95-483A-A950-06239C5C3714}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="STATUS"
+              DTS:DTSID="{1CA89814-F187-4C0D-8401-33290C0C5C95}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="QTR_ID"
+              DTS:DTSID="{8CCD1F0F-F80A-4D65-B588-B2B5063C951B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="MONTH_ID"
+              DTS:DTSID="{F2594218-0D66-49DE-ABDD-676F4132E649}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="YEAR_ID"
+              DTS:DTSID="{62A65FCB-C06E-4140-A700-6A20D06483D1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PRODUCTLINE"
+              DTS:DTSID="{F02B61BD-C9DE-45D6-A87F-D00E1ADC87DA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="MSRP"
+              DTS:DTSID="{5B9AD87C-9833-45C9-A214-3C562FFA9C06}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PRODUCTCODE"
+              DTS:DTSID="{495EF0E2-8DB9-4861-B9E8-A8B453C3B064}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CUSTOMERNAME"
+              DTS:DTSID="{498C8C13-6534-4712-ADF5-0250ED392A94}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PHONE"
+              DTS:DTSID="{4C79D3B1-4B73-4388-AAA8-A9348C0AC05F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ADDRESSLINE1"
+              DTS:DTSID="{8B2E1EC3-5D1C-4623-BD52-D937312942B4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ADDRESSLINE2"
+              DTS:DTSID="{B5FBE880-69EA-4B53-885A-D36F4476A3EB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CITY"
+              DTS:DTSID="{AD06A1BD-34FA-47A8-BD98-176BD89886D2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="STATE"
+              DTS:DTSID="{BCB97747-FAC1-49D4-B431-883E487DB481}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="POSTALCODE"
+              DTS:DTSID="{6BBFE53A-5E77-4505-85EF-056BF9667BF7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="COUNTRY"
+              DTS:DTSID="{E6002EB0-EBA4-4A0C-B206-873A380F9711}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TERRITORY"
+              DTS:DTSID="{3F2C3E3B-D8E8-4CDB-827E-877EBFF15056}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CONTACTLASTNAME"
+              DTS:DTSID="{2C1368CA-8589-4200-9DA8-6093F9AF9176}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CONTACTFIRSTNAME"
+              DTS:DTSID="{BEB5E0FF-E5B0-4CA8-A345-14E48AAB23B7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DEALSIZE"
+              DTS:DTSID="{53C1DC58-D9C9-481B-BCA1-42CB94BA5973}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost.SSIS.sa]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{9640A482-F468-4094-9F6C-FD8E29893250}"
+      DTS:ObjectName="localhost.SSIS.sa">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=localhost;User ID=sa;Initial Catalog=SSIS;Provider=MSOLEDBSQL.1;Application Name=SSIS-assignment1-{9640A482-F468-4094-9F6C-FD8E29893250}localhost.SSIS.sa;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAMeO3OwdkikyL1vYsYh5xkAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABwHQGLTtmiX1fQF6/Yb9JgzMhQAnxrwRevJai//dcWlQAAAAAOgAAAAAIAACAAAAAuIof+RPdg9cKh+RpCMY26IuS5xNlSxTmWER4Nnbbx2yAAAACEbqHLPH0K025hUVjY5Ed/BoxKjdlZme+eavpkQvLEA0AAAAA9B7ERNioNW1dGlUu7wgOeA1YXxhi9eBxHa0Y4fg2LA+UbG1KeKlVKsg3v//8AA2T9xPnMgrQ5NsPW6w43F7j2</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SalesData]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{7EC75341-B073-4FC0-938B-DB14D5050682}"
+      DTS:ObjectName="SalesData">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="16393"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="D:\sales_data_sample.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ORDERNUMBER"
+              DTS:DTSID="{F10D600F-A597-43FC-A2D4-B08993AB41A4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="QUANTITYORDERED"
+              DTS:DTSID="{0CC8C1F1-C0AA-4A7F-9E40-3694B9B21F15}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PRICEEACH"
+              DTS:DTSID="{FC5AACD1-BC9C-42CD-A5B8-F06B3D3B743C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ORDERLINENUMBER"
+              DTS:DTSID="{BFDA4780-DCE5-43E8-B7C8-A3734940A5A5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SALES"
+              DTS:DTSID="{A1B4C142-90EF-4EDC-B7ED-5F5D444754B4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ORDERDATE"
+              DTS:DTSID="{5A21EF25-4E52-4238-A2C6-440A1FDB2424}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="STATUS"
+              DTS:DTSID="{FD177CAB-3FEA-4048-9B89-BE026072D920}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="QTR_ID"
+              DTS:DTSID="{A7D314F1-A277-4450-9C28-7A39BB6E9270}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="MONTH_ID"
+              DTS:DTSID="{05494ABA-4E24-48E2-8B1E-EE8EE5A8A3E5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="YEAR_ID"
+              DTS:DTSID="{5B240C0C-412A-47F6-BECB-188C55773E46}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PRODUCTLINE"
+              DTS:DTSID="{33261B2F-0E55-49D2-A097-64EB061ABB38}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="MSRP"
+              DTS:DTSID="{74454288-92CD-4B87-BE5A-3714E0EEEA14}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PRODUCTCODE"
+              DTS:DTSID="{CAF87659-5DFA-488C-9C68-84CAAF304E81}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CUSTOMERNAME"
+              DTS:DTSID="{9F749A01-61D7-474A-81A9-928D9FFCC16C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PHONE"
+              DTS:DTSID="{0B5091AA-ADC5-4DBC-9DFC-55D1A14D51F4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ADDRESSLINE1"
+              DTS:DTSID="{68CF0ADC-3D27-4541-9EED-F659C6ED41B8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ADDRESSLINE2"
+              DTS:DTSID="{93943E74-E4C3-48B4-AA8A-416192AB4BBE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CITY"
+              DTS:DTSID="{9739F3B4-453A-4F61-AD14-A6EDF140B215}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="STATE"
+              DTS:DTSID="{4F210CDA-EE6B-4ECD-9462-78EED12C0D8F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="POSTALCODE"
+              DTS:DTSID="{505747E2-5283-4B5D-82A0-1BBF981C9402}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="COUNTRY"
+              DTS:DTSID="{D925FD6F-D71B-4AD3-94D8-40CAFB6BB4BB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TERRITORY"
+              DTS:DTSID="{1A7CC948-DF80-4CC8-80A5-E17E4C234179}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CONTACTLASTNAME"
+              DTS:DTSID="{E9AAFD2C-C92A-4EDF-9C9B-A6CCDCB1ACF7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CONTACTFIRSTNAME"
+              DTS:DTSID="{21041F80-4A94-45EB-A579-51DB385C84EC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DEALSIZE"
+              DTS:DTSID="{3BD8CF2B-FCE9-4666-9EDB-26C71E8990E5}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Transfer Sales Data Into Table"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{6F575E2F-2512-451F-B2A3-99A2BC9D085D}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Transfer Sales Data Into Table">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Transfer Sales Data Into Table\Data Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Transfer Sales Data Into Table\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\Data Conversion.Inputs[Data Conversion Input].Columns[ORDERNUMBER]"
+                      cachedDataType="i4"
+                      cachedName="ORDERNUMBER"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[ORDERNUMBER]" />
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\Data Conversion.Inputs[Data Conversion Input].Columns[QUANTITYORDERED]"
+                      cachedDataType="i4"
+                      cachedName="QUANTITYORDERED"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[QUANTITYORDERED]" />
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\Data Conversion.Inputs[Data Conversion Input].Columns[PRICEEACH]"
+                      cachedDataType="r8"
+                      cachedName="PRICEEACH"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[PRICEEACH]" />
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\Data Conversion.Inputs[Data Conversion Input].Columns[ORDERLINENUMBER]"
+                      cachedDataType="i4"
+                      cachedName="ORDERLINENUMBER"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[ORDERLINENUMBER]" />
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\Data Conversion.Inputs[Data Conversion Input].Columns[SALES]"
+                      cachedDataType="r8"
+                      cachedName="SALES"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[SALES]" />
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\Data Conversion.Inputs[Data Conversion Input].Columns[ORDERDATE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="ORDERDATE"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[ORDERDATE]" />
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\Data Conversion.Inputs[Data Conversion Input].Columns[STATUS]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="STATUS"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[STATUS]" />
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\Data Conversion.Inputs[Data Conversion Input].Columns[QTR_ID]"
+                      cachedDataType="i4"
+                      cachedName="QTR_ID"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[QTR_ID]" />
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\Data Conversion.Inputs[Data Conversion Input].Columns[MONTH_ID]"
+                      cachedDataType="i4"
+                      cachedName="MONTH_ID"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[MONTH_ID]" />
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\Data Conversion.Inputs[Data Conversion Input].Columns[YEAR_ID]"
+                      cachedDataType="i4"
+                      cachedName="YEAR_ID"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[YEAR_ID]" />
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\Data Conversion.Inputs[Data Conversion Input].Columns[PRODUCTLINE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="PRODUCTLINE"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[PRODUCTLINE]" />
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\Data Conversion.Inputs[Data Conversion Input].Columns[MSRP]"
+                      cachedDataType="i4"
+                      cachedName="MSRP"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[MSRP]" />
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\Data Conversion.Inputs[Data Conversion Input].Columns[PRODUCTCODE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="PRODUCTCODE"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[PRODUCTCODE]" />
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\Data Conversion.Inputs[Data Conversion Input].Columns[CUSTOMERNAME]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="CUSTOMERNAME"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[CUSTOMERNAME]" />
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\Data Conversion.Inputs[Data Conversion Input].Columns[PHONE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="PHONE"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[PHONE]" />
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\Data Conversion.Inputs[Data Conversion Input].Columns[ADDRESSLINE1]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="ADDRESSLINE1"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[ADDRESSLINE1]" />
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\Data Conversion.Inputs[Data Conversion Input].Columns[ADDRESSLINE2]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="ADDRESSLINE2"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[ADDRESSLINE2]" />
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\Data Conversion.Inputs[Data Conversion Input].Columns[CITY]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="CITY"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[CITY]" />
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\Data Conversion.Inputs[Data Conversion Input].Columns[STATE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="STATE"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[STATE]" />
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\Data Conversion.Inputs[Data Conversion Input].Columns[POSTALCODE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="POSTALCODE"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[POSTALCODE]" />
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\Data Conversion.Inputs[Data Conversion Input].Columns[COUNTRY]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="COUNTRY"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[COUNTRY]" />
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\Data Conversion.Inputs[Data Conversion Input].Columns[TERRITORY]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="TERRITORY"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[TERRITORY]" />
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\Data Conversion.Inputs[Data Conversion Input].Columns[CONTACTLASTNAME]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="CONTACTLASTNAME"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[CONTACTLASTNAME]" />
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\Data Conversion.Inputs[Data Conversion Input].Columns[CONTACTFIRSTNAME]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="CONTACTFIRSTNAME"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[CONTACTFIRSTNAME]" />
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\Data Conversion.Inputs[Data Conversion Input].Columns[DEALSIZE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="DEALSIZE"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[DEALSIZE]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Transfer Sales Data Into Table\Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Transfer Sales Data Into Table\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ORDERNUMBER]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Transfer Sales Data Into Table\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ORDERNUMBER]"
+                      name="Copy of ORDERNUMBER"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[ORDERNUMBER]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of QUANTITYORDERED]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Transfer Sales Data Into Table\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of QUANTITYORDERED]"
+                      name="Copy of QUANTITYORDERED"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[QUANTITYORDERED]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PRICEEACH]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Transfer Sales Data Into Table\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PRICEEACH]"
+                      name="Copy of PRICEEACH"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[PRICEEACH]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ORDERLINENUMBER]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Transfer Sales Data Into Table\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ORDERLINENUMBER]"
+                      name="Copy of ORDERLINENUMBER"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[ORDERLINENUMBER]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of SALES]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Transfer Sales Data Into Table\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of SALES]"
+                      name="Copy of SALES"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[SALES]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ORDERDATE]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Transfer Sales Data Into Table\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ORDERDATE]"
+                      name="Copy of ORDERDATE"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[ORDERDATE]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of STATUS]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Transfer Sales Data Into Table\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of STATUS]"
+                      name="Copy of STATUS"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[STATUS]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of QTR_ID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Transfer Sales Data Into Table\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of QTR_ID]"
+                      name="Copy of QTR_ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[QTR_ID]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of MONTH_ID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Transfer Sales Data Into Table\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of MONTH_ID]"
+                      name="Copy of MONTH_ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[MONTH_ID]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of YEAR_ID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Transfer Sales Data Into Table\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of YEAR_ID]"
+                      name="Copy of YEAR_ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[YEAR_ID]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PRODUCTLINE]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="20"
+                      lineageId="Package\Transfer Sales Data Into Table\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PRODUCTLINE]"
+                      name="Copy of PRODUCTLINE"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[PRODUCTLINE]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of MSRP]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Transfer Sales Data Into Table\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of MSRP]"
+                      name="Copy of MSRP"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[MSRP]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PRODUCTCODE]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="20"
+                      lineageId="Package\Transfer Sales Data Into Table\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PRODUCTCODE]"
+                      name="Copy of PRODUCTCODE"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[PRODUCTCODE]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of CUSTOMERNAME]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="20"
+                      lineageId="Package\Transfer Sales Data Into Table\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of CUSTOMERNAME]"
+                      name="Copy of CUSTOMERNAME"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[CUSTOMERNAME]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PHONE]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="20"
+                      lineageId="Package\Transfer Sales Data Into Table\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PHONE]"
+                      name="Copy of PHONE"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[PHONE]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ADDRESSLINE1]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="20"
+                      lineageId="Package\Transfer Sales Data Into Table\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ADDRESSLINE1]"
+                      name="Copy of ADDRESSLINE1"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[ADDRESSLINE1]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ADDRESSLINE2]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="20"
+                      lineageId="Package\Transfer Sales Data Into Table\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ADDRESSLINE2]"
+                      name="Copy of ADDRESSLINE2"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[ADDRESSLINE2]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of CITY]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="20"
+                      lineageId="Package\Transfer Sales Data Into Table\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of CITY]"
+                      name="Copy of CITY"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[CITY]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of STATE]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="20"
+                      lineageId="Package\Transfer Sales Data Into Table\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of STATE]"
+                      name="Copy of STATE"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[STATE]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of POSTALCODE]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="20"
+                      lineageId="Package\Transfer Sales Data Into Table\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of POSTALCODE]"
+                      name="Copy of POSTALCODE"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[POSTALCODE]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of COUNTRY]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="20"
+                      lineageId="Package\Transfer Sales Data Into Table\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of COUNTRY]"
+                      name="Copy of COUNTRY"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[COUNTRY]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of TERRITORY]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="20"
+                      lineageId="Package\Transfer Sales Data Into Table\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of TERRITORY]"
+                      name="Copy of TERRITORY"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[TERRITORY]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of CONTACTLASTNAME]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="20"
+                      lineageId="Package\Transfer Sales Data Into Table\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of CONTACTLASTNAME]"
+                      name="Copy of CONTACTLASTNAME"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[CONTACTLASTNAME]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of CONTACTFIRSTNAME]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="20"
+                      lineageId="Package\Transfer Sales Data Into Table\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of CONTACTFIRSTNAME]"
+                      name="Copy of CONTACTFIRSTNAME"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[CONTACTFIRSTNAME]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of DEALSIZE]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="20"
+                      lineageId="Package\Transfer Sales Data Into Table\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of DEALSIZE]"
+                      name="Copy of DEALSIZE"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[DEALSIZE]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Transfer Sales Data Into Table\Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Transfer Sales Data Into Table\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Transfer Sales Data Into Table\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Transfer Sales Data Into Table\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Transfer Sales Data Into Table\Derived Column"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Transfer Sales Data Into Table\Derived Column.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\Derived Column.Inputs[Derived Column Input].Columns[ADDRESSLINE2]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="ADDRESSLINE2"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[ADDRESSLINE2]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[REPLACENULL](#{Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[ADDRESSLINE2]},"")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">REPLACENULL(ADDRESSLINE2,"")</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\Derived Column.Inputs[Derived Column Input].Columns[STATE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="STATE"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[STATE]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[REPLACENULL](#{Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[STATE]},"UnKnown")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">REPLACENULL(STATE,"UnKnown")</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\Derived Column.Inputs[Derived Column Input].Columns[POSTALCODE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="POSTALCODE"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[POSTALCODE]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[REPLACENULL](#{Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[POSTALCODE]},0)</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">REPLACENULL(POSTALCODE,0)</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\Derived Column.Inputs[Derived Column Input].Columns[TERRITORY]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="TERRITORY"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[TERRITORY]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[REPLACENULL](#{Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[TERRITORY]},"Not Assigned")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">REPLACENULL(TERRITORY,"Not Assigned")</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Transfer Sales Data Into Table\Derived Column.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Transfer Sales Data Into Table\Derived Column.Inputs[Derived Column Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Transfer Sales Data Into Table\Derived Column.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Transfer Sales Data Into Table\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Transfer Sales Data Into Table\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Transfer Sales Data Into Table\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Transfer Sales Data Into Table\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[FactsSale]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Transfer Sales Data Into Table\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.SSIS.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.SSIS.sa]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ORDERNUMBER]"
+                      cachedDataType="i4"
+                      cachedName="ORDERNUMBER"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ORDERNUMBER]"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[ORDERNUMBER]" />
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[QUANTITYORDERED]"
+                      cachedDataType="i4"
+                      cachedName="QUANTITYORDERED"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[QUANTITYORDERED]"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[QUANTITYORDERED]" />
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PRICEEACH]"
+                      cachedDataType="r8"
+                      cachedName="PRICEEACH"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PRICEEACH]"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[PRICEEACH]" />
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ORDERLINENUMBER]"
+                      cachedDataType="i4"
+                      cachedName="ORDERLINENUMBER"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ORDERLINENUMBER]"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[ORDERLINENUMBER]" />
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SALES]"
+                      cachedDataType="r8"
+                      cachedName="SALES"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SALES]"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[SALES]" />
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ORDERDATE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="ORDERDATE"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ORDERDATE]"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[ORDERDATE]" />
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[STATUS]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="STATUS"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[STATUS]"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[STATUS]" />
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[QTR_ID]"
+                      cachedDataType="i4"
+                      cachedName="QTR_ID"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[QTR_ID]"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[QTR_ID]" />
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[MONTH_ID]"
+                      cachedDataType="i4"
+                      cachedName="MONTH_ID"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MONTH_ID]"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[MONTH_ID]" />
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[YEAR_ID]"
+                      cachedDataType="i4"
+                      cachedName="YEAR_ID"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[YEAR_ID]"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[YEAR_ID]" />
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PRODUCTLINE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="PRODUCTLINE"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PRODUCTLINE]"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[PRODUCTLINE]" />
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[MSRP]"
+                      cachedDataType="i4"
+                      cachedName="MSRP"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MSRP]"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[MSRP]" />
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PRODUCTCODE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="PRODUCTCODE"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PRODUCTCODE]"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[PRODUCTCODE]" />
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CUSTOMERNAME]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="CUSTOMERNAME"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CUSTOMERNAME]"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[CUSTOMERNAME]" />
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PHONE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="PHONE"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PHONE]"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[PHONE]" />
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ADDRESSLINE1]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="ADDRESSLINE1"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ADDRESSLINE1]"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[ADDRESSLINE1]" />
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ADDRESSLINE2]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="ADDRESSLINE2"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ADDRESSLINE2]"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[ADDRESSLINE2]" />
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CITY]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="CITY"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CITY]"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[CITY]" />
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[STATE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="STATE"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[STATE]"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[STATE]" />
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[POSTALCODE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="POSTALCODE"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[POSTALCODE]"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[POSTALCODE]" />
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[COUNTRY]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="COUNTRY"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[COUNTRY]"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[COUNTRY]" />
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TERRITORY]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="TERRITORY"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TERRITORY]"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[TERRITORY]" />
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CONTACTLASTNAME]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="CONTACTLASTNAME"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CONTACTLASTNAME]"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[CONTACTLASTNAME]" />
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CONTACTFIRSTNAME]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="CONTACTFIRSTNAME"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CONTACTFIRSTNAME]"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[CONTACTFIRSTNAME]" />
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DEALSIZE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="DEALSIZE"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DEALSIZE]"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[DEALSIZE]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ORDERNUMBER]"
+                      dataType="i4"
+                      name="ORDERNUMBER" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[QUANTITYORDERED]"
+                      dataType="i4"
+                      name="QUANTITYORDERED" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PRICEEACH]"
+                      dataType="r8"
+                      name="PRICEEACH" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ORDERLINENUMBER]"
+                      dataType="i4"
+                      name="ORDERLINENUMBER" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SALES]"
+                      dataType="r8"
+                      name="SALES" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ORDERDATE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="ORDERDATE" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[STATUS]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="STATUS" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[QTR_ID]"
+                      dataType="i4"
+                      name="QTR_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MONTH_ID]"
+                      dataType="i4"
+                      name="MONTH_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[YEAR_ID]"
+                      dataType="i4"
+                      name="YEAR_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PRODUCTLINE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="PRODUCTLINE" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MSRP]"
+                      dataType="i4"
+                      name="MSRP" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PRODUCTCODE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="PRODUCTCODE" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CUSTOMERNAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="CUSTOMERNAME" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PHONE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="PHONE" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ADDRESSLINE1]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="ADDRESSLINE1" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ADDRESSLINE2]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="ADDRESSLINE2" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CITY]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="CITY" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[STATE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="STATE" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[POSTALCODE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="POSTALCODE" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[COUNTRY]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="COUNTRY" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TERRITORY]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="TERRITORY" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CONTACTLASTNAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="CONTACTLASTNAME" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CONTACTFIRSTNAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="CONTACTFIRSTNAME" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DEALSIZE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="DEALSIZE" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Transfer Sales Data Into Table\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Transfer Sales Data Into Table\OLE DB Destination 1"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination 1"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[Sales_bad_rows]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.SSIS.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.SSIS.sa]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[ORDERNUMBER]"
+                      cachedDataType="i4"
+                      cachedName="ORDERNUMBER"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[ORDERNUMBER]"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ORDERNUMBER]" />
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[QUANTITYORDERED]"
+                      cachedDataType="i4"
+                      cachedName="QUANTITYORDERED"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[QUANTITYORDERED]"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[QUANTITYORDERED]" />
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[PRICEEACH]"
+                      cachedDataType="r8"
+                      cachedName="PRICEEACH"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[PRICEEACH]"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PRICEEACH]" />
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[ORDERLINENUMBER]"
+                      cachedDataType="i4"
+                      cachedName="ORDERLINENUMBER"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[ORDERLINENUMBER]"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ORDERLINENUMBER]" />
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[SALES]"
+                      cachedDataType="r8"
+                      cachedName="SALES"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[SALES]"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SALES]" />
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[ORDERDATE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="ORDERDATE"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[ORDERDATE]"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ORDERDATE]" />
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[STATUS]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="STATUS"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[STATUS]"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[STATUS]" />
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[QTR_ID]"
+                      cachedDataType="i4"
+                      cachedName="QTR_ID"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[QTR_ID]"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[QTR_ID]" />
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[MONTH_ID]"
+                      cachedDataType="i4"
+                      cachedName="MONTH_ID"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[MONTH_ID]"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[MONTH_ID]" />
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[YEAR_ID]"
+                      cachedDataType="i4"
+                      cachedName="YEAR_ID"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[YEAR_ID]"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[YEAR_ID]" />
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[PRODUCTLINE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="PRODUCTLINE"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[PRODUCTLINE]"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PRODUCTLINE]" />
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[MSRP]"
+                      cachedDataType="i4"
+                      cachedName="MSRP"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[MSRP]"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[MSRP]" />
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[PRODUCTCODE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="PRODUCTCODE"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[PRODUCTCODE]"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PRODUCTCODE]" />
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[CUSTOMERNAME]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="CUSTOMERNAME"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[CUSTOMERNAME]"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CUSTOMERNAME]" />
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[PHONE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="PHONE"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[PHONE]"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PHONE]" />
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[ADDRESSLINE1]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="ADDRESSLINE1"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[ADDRESSLINE1]"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ADDRESSLINE1]" />
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[ADDRESSLINE2]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="ADDRESSLINE2"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[ADDRESSLINE2]"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ADDRESSLINE2]" />
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[CITY]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="CITY"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[CITY]"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CITY]" />
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[STATE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="STATE"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[STATE]"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[STATE]" />
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[POSTALCODE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="POSTALCODE"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[POSTALCODE]"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[POSTALCODE]" />
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[COUNTRY]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="COUNTRY"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[COUNTRY]"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[COUNTRY]" />
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[TERRITORY]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="TERRITORY"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[TERRITORY]"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TERRITORY]" />
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[CONTACTLASTNAME]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="CONTACTLASTNAME"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[CONTACTLASTNAME]"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CONTACTLASTNAME]" />
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[CONTACTFIRSTNAME]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="CONTACTFIRSTNAME"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[CONTACTFIRSTNAME]"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CONTACTFIRSTNAME]" />
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[DEALSIZE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="DEALSIZE"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[DEALSIZE]"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DEALSIZE]" />
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[ErrorCode]"
+                      cachedDataType="i4"
+                      cachedName="ErrorCode"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[ErrorCode]"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]" />
+                    <inputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[ErrorColumn]"
+                      cachedDataType="i4"
+                      cachedName="ErrorColumn"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[ErrorColumn]"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[ORDERNUMBER]"
+                      dataType="i4"
+                      name="ORDERNUMBER" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[QUANTITYORDERED]"
+                      dataType="i4"
+                      name="QUANTITYORDERED" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[PRICEEACH]"
+                      dataType="r8"
+                      name="PRICEEACH" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[ORDERLINENUMBER]"
+                      dataType="i4"
+                      name="ORDERLINENUMBER" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[SALES]"
+                      dataType="r8"
+                      name="SALES" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[ORDERDATE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="ORDERDATE" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[STATUS]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="STATUS" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[QTR_ID]"
+                      dataType="i4"
+                      name="QTR_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[MONTH_ID]"
+                      dataType="i4"
+                      name="MONTH_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[YEAR_ID]"
+                      dataType="i4"
+                      name="YEAR_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[PRODUCTLINE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="PRODUCTLINE" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[MSRP]"
+                      dataType="i4"
+                      name="MSRP" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[PRODUCTCODE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="PRODUCTCODE" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[CUSTOMERNAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="CUSTOMERNAME" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[PHONE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="PHONE" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[ADDRESSLINE1]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="ADDRESSLINE1" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[ADDRESSLINE2]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="ADDRESSLINE2" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[CITY]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="CITY" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[STATE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="STATE" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[POSTALCODE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="POSTALCODE" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[COUNTRY]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="COUNTRY" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[TERRITORY]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="TERRITORY" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[CONTACTLASTNAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="CONTACTLASTNAME" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[CONTACTFIRSTNAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="CONTACTFIRSTNAME" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[DEALSIZE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="DEALSIZE" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[ErrorCode]"
+                      dataType="i4"
+                      name="ErrorCode" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[ErrorColumn]"
+                      dataType="i4"
+                      name="ErrorColumn" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Transfer Sales Data Into Table\OLE DB Source"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[SalesData]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Transfer Sales Data Into Table\OLE DB Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.SSIS.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.SSIS.sa]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[ORDERNUMBER]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ORDERNUMBER]"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[ORDERNUMBER]"
+                      name="ORDERNUMBER"
+                      truncationRowDisposition="RedirectRow" />
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[QUANTITYORDERED]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[QUANTITYORDERED]"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[QUANTITYORDERED]"
+                      name="QUANTITYORDERED"
+                      truncationRowDisposition="RedirectRow" />
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[PRICEEACH]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PRICEEACH]"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[PRICEEACH]"
+                      name="PRICEEACH"
+                      truncationRowDisposition="RedirectRow" />
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[ORDERLINENUMBER]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ORDERLINENUMBER]"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[ORDERLINENUMBER]"
+                      name="ORDERLINENUMBER"
+                      truncationRowDisposition="RedirectRow" />
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[SALES]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SALES]"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[SALES]"
+                      name="SALES"
+                      truncationRowDisposition="RedirectRow" />
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[ORDERDATE]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ORDERDATE]"
+                      length="20"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[ORDERDATE]"
+                      name="ORDERDATE"
+                      truncationRowDisposition="RedirectRow" />
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[STATUS]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[STATUS]"
+                      length="50"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[STATUS]"
+                      name="STATUS"
+                      truncationRowDisposition="RedirectRow" />
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[QTR_ID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[QTR_ID]"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[QTR_ID]"
+                      name="QTR_ID"
+                      truncationRowDisposition="RedirectRow" />
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[MONTH_ID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[MONTH_ID]"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[MONTH_ID]"
+                      name="MONTH_ID"
+                      truncationRowDisposition="RedirectRow" />
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[YEAR_ID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[YEAR_ID]"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[YEAR_ID]"
+                      name="YEAR_ID"
+                      truncationRowDisposition="RedirectRow" />
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[PRODUCTLINE]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PRODUCTLINE]"
+                      length="20"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[PRODUCTLINE]"
+                      name="PRODUCTLINE"
+                      truncationRowDisposition="RedirectRow" />
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[MSRP]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[MSRP]"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[MSRP]"
+                      name="MSRP"
+                      truncationRowDisposition="RedirectRow" />
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[PRODUCTCODE]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PRODUCTCODE]"
+                      length="20"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[PRODUCTCODE]"
+                      name="PRODUCTCODE"
+                      truncationRowDisposition="RedirectRow" />
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[CUSTOMERNAME]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CUSTOMERNAME]"
+                      length="20"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[CUSTOMERNAME]"
+                      name="CUSTOMERNAME"
+                      truncationRowDisposition="RedirectRow" />
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[PHONE]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PHONE]"
+                      length="20"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[PHONE]"
+                      name="PHONE"
+                      truncationRowDisposition="RedirectRow" />
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[ADDRESSLINE1]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ADDRESSLINE1]"
+                      length="20"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[ADDRESSLINE1]"
+                      name="ADDRESSLINE1"
+                      truncationRowDisposition="RedirectRow" />
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[ADDRESSLINE2]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ADDRESSLINE2]"
+                      length="20"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[ADDRESSLINE2]"
+                      name="ADDRESSLINE2"
+                      truncationRowDisposition="RedirectRow" />
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[CITY]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CITY]"
+                      length="20"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[CITY]"
+                      name="CITY"
+                      truncationRowDisposition="RedirectRow" />
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[STATE]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[STATE]"
+                      length="20"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[STATE]"
+                      name="STATE"
+                      truncationRowDisposition="RedirectRow" />
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[POSTALCODE]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[POSTALCODE]"
+                      length="20"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[POSTALCODE]"
+                      name="POSTALCODE"
+                      truncationRowDisposition="RedirectRow" />
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[COUNTRY]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[COUNTRY]"
+                      length="20"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[COUNTRY]"
+                      name="COUNTRY"
+                      truncationRowDisposition="RedirectRow" />
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[TERRITORY]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TERRITORY]"
+                      length="20"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[TERRITORY]"
+                      name="TERRITORY"
+                      truncationRowDisposition="RedirectRow" />
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[CONTACTLASTNAME]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CONTACTLASTNAME]"
+                      length="20"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[CONTACTLASTNAME]"
+                      name="CONTACTLASTNAME"
+                      truncationRowDisposition="RedirectRow" />
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[CONTACTFIRSTNAME]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CONTACTFIRSTNAME]"
+                      length="20"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[CONTACTFIRSTNAME]"
+                      name="CONTACTFIRSTNAME"
+                      truncationRowDisposition="RedirectRow" />
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[DEALSIZE]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DEALSIZE]"
+                      length="20"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[DEALSIZE]"
+                      name="DEALSIZE"
+                      truncationRowDisposition="RedirectRow" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ORDERNUMBER]"
+                      dataType="i4"
+                      name="ORDERNUMBER" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[QUANTITYORDERED]"
+                      dataType="i4"
+                      name="QUANTITYORDERED" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PRICEEACH]"
+                      dataType="r8"
+                      name="PRICEEACH" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ORDERLINENUMBER]"
+                      dataType="i4"
+                      name="ORDERLINENUMBER" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SALES]"
+                      dataType="r8"
+                      name="SALES" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ORDERDATE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="ORDERDATE" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[STATUS]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="STATUS" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[QTR_ID]"
+                      dataType="i4"
+                      name="QTR_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[MONTH_ID]"
+                      dataType="i4"
+                      name="MONTH_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[YEAR_ID]"
+                      dataType="i4"
+                      name="YEAR_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PRODUCTLINE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="PRODUCTLINE" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[MSRP]"
+                      dataType="i4"
+                      name="MSRP" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PRODUCTCODE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="PRODUCTCODE" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CUSTOMERNAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="CUSTOMERNAME" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PHONE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="PHONE" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ADDRESSLINE1]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="ADDRESSLINE1" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ADDRESSLINE2]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="ADDRESSLINE2" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CITY]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="CITY" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[STATE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="STATE" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[POSTALCODE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="POSTALCODE" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[COUNTRY]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="COUNTRY" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TERRITORY]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="TERRITORY" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CONTACTLASTNAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="CONTACTLASTNAME" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CONTACTFIRSTNAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="CONTACTFIRSTNAME" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DEALSIZE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="DEALSIZE" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ORDERNUMBER]"
+                      dataType="i4"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ORDERNUMBER]"
+                      name="ORDERNUMBER" />
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[QUANTITYORDERED]"
+                      dataType="i4"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[QUANTITYORDERED]"
+                      name="QUANTITYORDERED" />
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PRICEEACH]"
+                      dataType="r8"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PRICEEACH]"
+                      name="PRICEEACH" />
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ORDERLINENUMBER]"
+                      dataType="i4"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ORDERLINENUMBER]"
+                      name="ORDERLINENUMBER" />
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SALES]"
+                      dataType="r8"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SALES]"
+                      name="SALES" />
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ORDERDATE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ORDERDATE]"
+                      name="ORDERDATE" />
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[STATUS]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[STATUS]"
+                      name="STATUS" />
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[QTR_ID]"
+                      dataType="i4"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[QTR_ID]"
+                      name="QTR_ID" />
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[MONTH_ID]"
+                      dataType="i4"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[MONTH_ID]"
+                      name="MONTH_ID" />
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[YEAR_ID]"
+                      dataType="i4"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[YEAR_ID]"
+                      name="YEAR_ID" />
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PRODUCTLINE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PRODUCTLINE]"
+                      name="PRODUCTLINE" />
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[MSRP]"
+                      dataType="i4"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[MSRP]"
+                      name="MSRP" />
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PRODUCTCODE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PRODUCTCODE]"
+                      name="PRODUCTCODE" />
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CUSTOMERNAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CUSTOMERNAME]"
+                      name="CUSTOMERNAME" />
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PHONE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PHONE]"
+                      name="PHONE" />
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ADDRESSLINE1]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ADDRESSLINE1]"
+                      name="ADDRESSLINE1" />
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ADDRESSLINE2]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ADDRESSLINE2]"
+                      name="ADDRESSLINE2" />
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CITY]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CITY]"
+                      name="CITY" />
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[STATE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[STATE]"
+                      name="STATE" />
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[POSTALCODE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[POSTALCODE]"
+                      name="POSTALCODE" />
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[COUNTRY]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[COUNTRY]"
+                      name="COUNTRY" />
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TERRITORY]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TERRITORY]"
+                      name="TERRITORY" />
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CONTACTLASTNAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CONTACTLASTNAME]"
+                      name="CONTACTLASTNAME" />
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CONTACTFIRSTNAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CONTACTFIRSTNAME]"
+                      name="CONTACTFIRSTNAME" />
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DEALSIZE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DEALSIZE]"
+                      name="DEALSIZE" />
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Transfer Sales Data Into Table.Paths[Data Conversion Output]"
+              endId="Package\Transfer Sales Data Into Table\Derived Column.Inputs[Derived Column Input]"
+              name="Data Conversion Output"
+              startId="Package\Transfer Sales Data Into Table\Data Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Transfer Sales Data Into Table.Paths[Derived Column Output]"
+              endId="Package\Transfer Sales Data Into Table\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\Transfer Sales Data Into Table\Derived Column.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Transfer Sales Data Into Table.Paths[OLE DB Source Error Output]"
+              endId="Package\Transfer Sales Data Into Table\OLE DB Destination 1.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Error Output"
+              startId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Error Output]" />
+            <path
+              refId="Package\Transfer Sales Data Into Table.Paths[OLE DB Source Output]"
+              endId="Package\Transfer Sales Data Into Table\Data Conversion.Inputs[Data Conversion Input]"
+              name="OLE DB Source Output"
+              startId="Package\Transfer Sales Data Into Table\OLE DB Source.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="228,42"
+          Id="Package\Transfer Sales Data Into Table"
+          TopLeft="176.5,47.5" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Transfer Sales Data Into Table">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="177,42"
+          Id="Package\Transfer Sales Data Into Table\OLE DB Destination"
+          TopLeft="234,222" />
+        <NodeLayout
+          Size="161,42"
+          Id="Package\Transfer Sales Data Into Table\Data Conversion"
+          TopLeft="85,72" />
+        <NodeLayout
+          Size="157,42"
+          Id="Package\Transfer Sales Data Into Table\OLE DB Source"
+          TopLeft="278,36" />
+        <NodeLayout
+          Size="158,42"
+          Id="Package\Transfer Sales Data Into Table\Derived Column"
+          TopLeft="78,149" />
+        <EdgeLayout
+          Id="Package\Transfer Sales Data Into Table.Paths[OLE DB Source Output]"
+          TopLeft="278,57">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-32,36"
+              Start="0,0"
+              End="-24.5,36">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-12,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-12,0"
+                    Point2="-16,0"
+                    Point3="-16,4" />
+                  <mssgle:LineSegment
+                    End="-16,32" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-16,32"
+                    Point2="-16,36"
+                    Point3="-20,36" />
+                  <mssgle:LineSegment
+                    End="-24.5,36" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Transfer Sales Data Into Table.Paths[Data Conversion Output]"
+          TopLeft="165.5,114">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-8.5,35"
+              Start="0,0"
+              End="-8.5,27.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.5"
+                    Point2="0,17.5"
+                    Point3="-4,17.5" />
+                  <mssgle:LineSegment
+                    End="-4.5,17.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-4.5,17.5"
+                    Point2="-8.5,17.5"
+                    Point3="-8.5,21.5" />
+                  <mssgle:LineSegment
+                    End="-8.5,27.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Transfer Sales Data Into Table.Paths[Derived Column Output]"
+          TopLeft="157,191">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="165.5,31"
+              Start="0,0"
+              End="165.5,23.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,11.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,11.5"
+                    Point2="0,15.5"
+                    Point3="4,15.5" />
+                  <mssgle:LineSegment
+                    End="161.5,15.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="161.5,15.5"
+                    Point2="165.5,15.5"
+                    Point3="165.5,19.5" />
+                  <mssgle:LineSegment
+                    End="165.5,23.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="186,42"
+          Id="Package\Transfer Sales Data Into Table\OLE DB Destination 1"
+          TopLeft="434,118" />
+        <EdgeLayout
+          Id="Package\Transfer Sales Data Into Table.Paths[OLE DB Source Error Output]"
+          TopLeft="356.5,78">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="170.5,40"
+              Start="0,0"
+              End="170.5,32.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16"
+                    Point2="0,20"
+                    Point3="4,20" />
+                  <mssgle:LineSegment
+                    End="166.5,20" />
+                  <mssgle:CubicBezierSegment
+                    Point1="166.5,20"
+                    Point2="170.5,20"
+                    Point3="170.5,24" />
+                  <mssgle:LineSegment
+                    End="170.5,32.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="21.81609375,25,126.8678125,11.43359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Transfer Sales Data Into Table\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Transfer Sales Data Into Table\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Transfer Sales Data Into Table\OLE DB Destination 1">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
